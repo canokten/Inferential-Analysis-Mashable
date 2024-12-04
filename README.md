@@ -1,27 +1,10 @@
-# NewsArticles
 Inference on News Articles Data 
 
+Credits: Acknowledge the source.
 
+The articles were published by Mashable (www.mashable.com) and their content as the rights to reproduce it belongs to them. Hence, this dataset does not share the original content but some statistics associated with it. The original content be publicly accessed and retrieved using the provided urls.
 
-
-Qs:
-
-1.4. Does variable selection and model build using same trainning cause overdipping?
-2. Does the method used for "3.1.4 Zero-inflated test" appropriate/necessary/correct?
-3. Does splitting using population paramter create bias?
-# Set seed
-set.seed(111)
-
-# Split data - train/test
-partition <- createDataPartition(y = news_data$shares, 
-                                 p = 0.7,  # Proportion to allocate to training set
-                                 list = FALSE)  # Get indices directly
-
-# Create the training and test datasets
-training_set <- news_data[partition, ]
-test_set <- news_data[-partition, ]
-
-dim(training_set)
-dim(test_set)
-
-
+Acquisition date: January 8, 2015
+The dataset is from UCI Machine Learning Repository, called "Online News Popularity".
+DOI: https://doi.org/10.24432/C5NS3V
+Authors: Kelwin Fernandes, Pedro Vinagre, Paulo Cortez, Pedro Sernadela. Published in 2types")
