@@ -1,15 +1,38 @@
-Inference on News Articles Data 
+# Inference on News Articles Data
 
-Credits: Acknowledge the source.
+## Project Overview
+
+This project analyzes the factors that contribute to the popularity of online news articles published by Mashable, with a specific focus on identifying statistically significant predictors of article popularity. The analysis further investigates how these predictors vary across different content categories—specifically between articles in the Technology and Entertainment channels.
+
+## Research Objectives
+
+### 1. Feature Importance:
+Identify which article-level features (e.g., keyword statistics, sentiment polarity, publication time) are most strongly associated with the number of shares an article receives.
+
+### 2. Channel-Specific Differences:
+Examine how key predictors of popularity differ between Technology and Entertainment articles. Are certain features more or less influential depending on the channel?
+
+## Credits (Dataset Information)
+
+Source: UCI Machine Learning Repository – "Online News Popularity"
+
+DOI: https://doi.org/10.24432/C5NS3V
+
+Original Publisher: Mashable (www.mashable.com)
+
+Authors: Kelwin Fernandes, Pedro Vinagre, Paulo Cortez, Pedro Sernadela
+
+Acquisition Date: January 8, 2015
+
+Format: Tabular (61 features + 1 target)
+
+Target Variable: shares (number of article shares)
 
 The articles were published by Mashable (www.mashable.com) and their content as the rights to reproduce it belongs to them. Hence, this dataset does not share the original content but some statistics associated with it. The original content be publicly accessed and retrieved using the provided urls.
 
-Acquisition date: January 8, 2015
-The dataset is from UCI Machine Learning Repository, called "Online News Popularity".
-DOI: https://doi.org/10.24432/C5NS3V
-Authors: Kelwin Fernandes, Pedro Vinagre, Paulo Cortez, Pedro Sernadela. Published in 2types")
+### Variable Descriptions:
 
-Variable Descriptions:
+The dataset contains metadata, content statistics, and sentiment metrics for nearly 40,000 Mashable articles. It does not include full article text, but includes a variety of features derived from content and metadata (e.g., token counts, LDA topics, sentiment scores, publication date, etc.). The full article content can be accessed via the original URLs provided in the data.
 
 - _url_: URL of the article (non-predictive)
 - _timedelta_: Days between the article publication and the dataset acquisition (non-predictive)
@@ -72,3 +95,7 @@ Variable Descriptions:
 - _abs_title_subjectivity_: Absolute subjectivity level (from 0 to 1)
 - _abs_title_sentiment_polarity_: Absolute polarity level(from 0 to 1)
 - _shares_: Number of shares (target)
+
+**Notes on Usage**
+1. Non-Predictive Features like url and timedelta are excluded from modeling.
+2. Articles are tagged with binary indicators for channel (e.g., data_channel_is_entertainment), which support subgroup comparisons.
